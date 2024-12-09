@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Board } from "./board";
+import { Board } from "./Board";
 import "./tic-tac-toe.sass";
 
 type BoardArray = Array<Array<string | null>>;
@@ -102,9 +102,11 @@ export const TicTacToe = () => {
 	return (
 		<div className='game'>
 			<h1> Tic-Tac-Toe</h1>
+			<div className="playerWin">
+			{winner && <p>{winner === "X" ? "You Win!!!" : "AI Wins :,,,)"}</p>}
+			{isNoWinner && <p> No one wins</p>}</div>
 			<Board board={board} handleClick={handleOnClick} />
-			{winner && <p>{winner === "X" ? "You Win" : "AI Wins"}</p>}
-			{isNoWinner && <p> No one wins</p>}
+			
 			<button className='reset' type='button' onClick={() => restartGame()}>
 				Start new Game
 			</button>

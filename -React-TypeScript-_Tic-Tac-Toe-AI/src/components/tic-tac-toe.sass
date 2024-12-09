@@ -31,14 +31,15 @@
             outline: 2px solid #333
 
     .cell_x
-        background: #bb76ff
+        background: #00adff
         color: white
 
         &:hover
             color: white
 
     .cell_o
-        color: blue
+        color: #ff5000
+
 
         &:hover
             color: blue
@@ -55,7 +56,7 @@
         padding: 10px
         border: none
         font-size: 16px
-        background-color: #e0e0e0
+        background-color: #806db7
         cursor: pointer
 
         &:hover
@@ -63,6 +64,30 @@
 
         &:focus
             outline: 2px solid #333
+
+.playerWin
+  padding: 10px
+  margin-top: 20px
+  text-align: center
+  font-size: 24px
+  font-weight: 700
+  color: #3498db
+  animation: blink 1s infinite alternate
+
+  p
+    margin: 0
+    font-size: 20px
+    font-weight: 600
+    text-transform: uppercase
+
+// Blinking animation
+@keyframes blink
+  0% 
+    opacity: 1
+  50% 
+    opacity: 0
+  100% 
+    opacity: 1
 
 @media (max-width: 768px)
     .cell
