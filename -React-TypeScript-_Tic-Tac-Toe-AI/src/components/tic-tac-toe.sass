@@ -1,0 +1,71 @@
+.game
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .board
+        display: grid
+        grid-template-columns: repeat(3, 3fr)
+        justify-content: center
+        align-items: center
+
+    .cell
+        margin-left: 10px
+        margin-top: 10px
+        width: 100px
+        height: 100px 
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-size: 50px
+        font-weight: 700
+        background-color: #f2f2f2
+        cursor: pointer
+        transition: background-color 0.2s ease, color 0.2s ease
+
+        &:hover
+            background-color: #ddd
+
+        &:focus
+            outline: 2px solid #333
+
+    .cell_x
+        background: #bb76ff
+        color: white
+
+        &:hover
+            color: white
+
+    .cell_o
+        color: blue
+
+        &:hover
+            color: blue
+
+    p
+        text-transform: uppercase
+        font-size: 20px
+        font-weight: 500
+        margin-top: 30px
+
+    .reset
+        margin-top: 20px
+        min-width: 200px
+        padding: 10px
+        border: none
+        font-size: 16px
+        background-color: #e0e0e0
+        cursor: pointer
+
+        &:hover
+            background-color: #d6d6d6
+
+        &:focus
+            outline: 2px solid #333
+
+@media (max-width: 768px)
+    .cell
+        width: 70px
+        height: 70px
+        font-size: 35px
